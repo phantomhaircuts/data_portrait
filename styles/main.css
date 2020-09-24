@@ -15,14 +15,23 @@ body {
     scroll-snap-type: y mandatory;
   overflow-y: scroll;
 }
-  .container {
+  .intro-container {
       display: flex;
       margin: 400px 40px 40px 40px;
-      color: black;
+      /* color: black; */
+  }
+
+  .mid-container {
+    display: flex;
+    margin: 20px 40px 40px 40px;
   }
 
   .content {
-      margin: 0px 0px 200px 0px;
+      margin: 0px 0px 100px 0px;
+  }
+
+  .redacted {
+    background-color: black;
   }
 
   header {
@@ -48,7 +57,16 @@ body {
     margin-right: 30px;
   }
 
-  .intro-content {
+.flip {
+    -webkit-transform:rotate(-180deg);
+-moz-transform:rotate(-180deg);
+-o-transform:rotate(-180deg);
+transform:rotate(-180deg);
+ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
+
+  .intro-content, .mid-content {
       padding: 10px;
   }
 
@@ -79,7 +97,7 @@ body {
     margin: 100px auto;
       height: 720px;
       width: 100%;
-      max-width: 1280px;
+      max-width: 1600px;
       background-color: aquamarine;
       position: relative;
       overflow: hidden;
@@ -93,7 +111,25 @@ body {
   -moz-transform: scaleX(1.5);
   }
   
-  @keyframes noise-anim {
+  .glitch:after {
+    content: attr(data-text);
+    position: absolute;
+    left: 2px;
+    text-shadow: -2px 0 red;
+    top: 0;
+    color: white;
+    background: black;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: noise 2s infinite linear alternate-reverse;
+  }
+  
+  footer {
+      font-size: 9px;
+      padding: 30px;
+  }
+
+  @keyframes noise {
     0% {
       clip: rect(69px, 9999px, 60px, 0);
     }
@@ -158,20 +194,8 @@ body {
       clip: rect(31px, 9999px, 98px, 0);
     }
   }
-  .glitch:after {
-    content: attr(data-text);
-    position: absolute;
-    left: 2px;
-    text-shadow: -2px 0 red;
-    top: 0;
-    color: white;
-    background: black;
-    overflow: hidden;
-    clip: rect(0, 900px, 0, 0);
-    animation: noise-anim 2s infinite linear alternate-reverse;
-  }
-  
-  @keyframes noise-anim-2 {
+
+  @keyframes noise-2 {
     0% {
       clip: rect(90px, 9999px, 44px, 0);
     }
@@ -246,6 +270,6 @@ body {
     background: black;
     overflow: hidden;
     clip: rect(0, 900px, 0, 0);
-    animation: noise-anim-2 3s infinite linear alternate-reverse;
+    animation: noise-2 3s infinite linear alternate-reverse;
   }
   
