@@ -128,7 +128,7 @@ body {
       color: white;
   }
 
-  .overlay p {
+  .overlay pre {
       font-size: 4px;
       -webkit-touch-callout: none;
       -webkit-user-select: none;
