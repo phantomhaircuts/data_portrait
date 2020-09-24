@@ -128,6 +128,16 @@ body {
       color: white;
   }
 
+  .overlay p {
+      font-size: 4px;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+  }
+
   .glitch:after {
     content: attr(data-text);
     position: absolute;
