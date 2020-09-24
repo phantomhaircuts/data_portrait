@@ -13,12 +13,12 @@ body {
   }
 .wrapper {
     scroll-snap-type: y mandatory;
-  overflow-y: scroll;
+    scroll-padding-top: 15vh;
+    overflow-y: scroll;
 }
   .intro-container {
       display: flex;
       margin: 400px 40px 40px 40px;
-      /* color: black; */
   }
 
   .mid-container {
@@ -51,6 +51,7 @@ body {
     justify-content: center;
     z-index: 999;
   }
+
   .creditz {
     color: white;
     font-size: 9px;
@@ -59,15 +60,16 @@ body {
 
 .flip {
     -webkit-transform:rotate(-180deg);
--moz-transform:rotate(-180deg);
--o-transform:rotate(-180deg);
-transform:rotate(-180deg);
-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
-filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+    -moz-transform:rotate(-180deg);
+    -o-transform:rotate(-180deg);
+    transform:rotate(-180deg);
+    ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+    filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
 }
 
   .intro-content, .mid-content {
       padding: 10px;
+      scroll-snap-align: center;
   }
 
   .imgwrap {
@@ -79,6 +81,7 @@ filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
     width: 100%;
     height: auto; /* maintain aspect ratio*/
     margin: auto; /*optional centering of image*/
+    scroll-snap-align: center;
  }
   
   .glitch {
@@ -94,7 +97,7 @@ filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
   }
 
   .full {
-    margin: 100px auto;
+    margin: 100px auto 0;
       height: 720px;
       width: 100%;
       max-width: 1600px;
@@ -111,6 +114,20 @@ filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
   -moz-transform: scaleX(1.5);
   }
   
+  .overlay {
+    width: 100%;
+    height: 100%;            
+    position: absolute;
+    /* top: 0; */
+    /* left: 0; */
+    padding: 30px;
+    opacity: 0.8;  /* for demo purpose  */
+  }
+
+  .overlay-content {
+      color: white;
+  }
+
   .glitch:after {
     content: attr(data-text);
     position: absolute;
@@ -124,9 +141,16 @@ filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
     animation: noise 2s infinite linear alternate-reverse;
   }
   
+  footer {
+      margin: 0;
+  }
+
   footer p {
+      margin: 0;
       font-size: 9px;
       padding: 30px;
+      background-color: black;
+      color: white;
   }
 
   @keyframes noise {
