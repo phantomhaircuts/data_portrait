@@ -8,12 +8,13 @@ html {
     }
 
 body {
-    /* background: black; */
-    /* color: white; */
     margin: 0px; 
     padding: 0px;
   }
-
+.wrapper {
+    scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
   .container {
       display: flex;
       margin: 400px 40px 40px 40px;
@@ -40,13 +41,18 @@ body {
     align-items: center;
     justify-content: center;
   }
+  .creditz {
+    color: white;
+    font-size: 9px;
+    margin-right: 30px;
+  }
 
   .intro-content {
       padding: 10px;
   }
 
   .imgwrap {
-    width: 50%; /*or whatever you choose*/
+    width: 60%; 
     margin: auto;
  }
  .imgwrap img {
