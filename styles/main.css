@@ -9,15 +9,19 @@ html {
 
 body {
     /* background: black; */
-    color: white;
+    /* color: white; */
     margin: 0px; 
+    padding: 0px;
   }
 
   .container {
       display: flex;
-      margin: 150px;
-      min-height: 1500px;
+      margin: 400px 40px 40px 40px;
       color: black;
+  }
+
+  .content {
+      margin: 0px 0px 200px 0px;
   }
 
   header {
@@ -31,10 +35,14 @@ body {
     top: 0;
     width: 100%; /* Full width */
     height: 100vh;
-    transition: 3s; /* Add a transition effect (when scrolling - and font size is decreased) */
+    transition: 2s; /* Add a transition effect (when scrolling - and font size is decreased) */
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .intro-content {
+      padding: 10px;
   }
 
   .imgwrap {
@@ -44,16 +52,13 @@ body {
  .imgwrap img {
     display: block;
     width: 100%;
-    max-width: 1000px; /*actual image width*/
     height: auto; /* maintain aspect ratio*/
     margin: auto; /*optional centering of image*/
  }
   
   .glitch {
     font-family: 'Helvetica', sans-serif;
-    /* font-size: 100px; */
     position: relative;
-    /* width: 400px; */
     margin: 0 auto;
     text-decoration: wavy;
     text-decoration: line-through;
